@@ -1,7 +1,9 @@
-using { MySAPproject as my } from '../db/schema';
+namespace my.bookshop;
 
-@path: '/service/MyProjectSvcs'
-@requires: 'authenticated-user'
-service MySAPprojectService {
-
+entity Books {
+  key ID    : UUID;
+      title : String;
+      author: String;
+      stock : Integer;
+      price : Decimal(10,2);
 }
